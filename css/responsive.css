@@ -1,0 +1,22 @@
+@media screen and (min-width: 1200px){
+    .container-fluid {
+        max-width: 1920px;
+    }
+    .container-1730 {
+        max-width: 1730px;
+    }
+}
+@media screen and (max-width: 767px){
+    .footer-bg {
+        background-repeat: repeat!important;
+    }
+    .section1 .abs h1 {
+        font-size: 2.5rem;
+        letter-spacing: -2px;
+        line-height: 2rem;
+    }
+    .home-card-pagination-title {
+        font-size: 22px;
+        line-height: 30px;
+    }
+}

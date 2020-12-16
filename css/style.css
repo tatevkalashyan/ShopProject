@@ -1,0 +1,399 @@
+
+@font-face {
+    font-family: "MYRIADPRO-REGULAR";
+    src: url("../fonts/MYRIADPRO-REGULAR.OTF");
+}
+@font-face {
+    font-family: "MYRIADPRO-BOLD";
+    src: url("../fonts/MYRIADPRO-BOLD.OTF");
+}
+@font-face {
+    font-family: "MYRIADPRO-SEMIBOLD";
+    src: url("../fonts/MYRIADPRO-SEMIBOLD.OTF");
+}
+body {
+    font-family: 'MYRIADPRO-REGULAR', sans-serif;
+    background-color: #f3f3f3;
+}
+.header-bg {
+    background: linear-gradient(90deg, #033d29, #097814);
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.icon-search-container {
+    display: inline-block;
+    border: 1px solid #c4b3ab;
+    border-radius: 20px;
+    height: 35px;
+    width: 35px;
+    position: relative;
+    transition: width 0.2s ease-out;
+    backface-visibility: hidden;
+}
+.icon-search-container.active {
+    width: 285px;
+    background-color: #fff;
+}
+.icon-search-container.active .fa-times-circle {
+    opacity: 1;
+}
+.icon-search-container.active .search-input {
+    width: 200px;
+}
+.icon-search-container .fa-search {
+    color: #c4b3ab;
+    font-size: 20px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    cursor: pointer;
+}
+.icon-search-container .fa-times-circle {
+    opacity: 0;
+    color: #c4b3ab;
+    font-size: 18px;
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    transition: opacity 0.2s ease-out;
+    cursor: pointer;
+}
+
+.icon-search-container .search-input {
+    position: absolute;
+    cursor: default;
+    left: 45px;
+    top: 2px;
+    width: 0;
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: width 0.2s ease-out;
+    color: #c4b3ab;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: #c4b3ab;
+    font-size: 	1.25rem;
+    text-transform: uppercase;
+}
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: #fff;
+    font-family: 'MYRIADPRO-BOLD', sans-serif;
+}
+.section1 .abs {
+    position: absolute;
+    z-index: 11;
+    bottom: 30%;
+    left: 19%;
+}
+.section1 .abs h1 {
+    color: #e3e3e3;
+    font-size: 6.5rem;
+    letter-spacing: -5px;
+    line-height: 5rem;
+    font-family: "MYRIADPRO-SEMIBOLD", sans-serif;
+}
+section h2 {
+    font-family: 'MYRIADPRO-BOLD', sans-serif;
+    font-size: 67px;
+    color: #000000;
+    letter-spacing: 0;
+    font-variant: all-petite-caps;
+}
+.section2 .card {
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+.section2 .card .img-area {
+    width: 180px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.btn-green-gradient {
+    background: linear-gradient(90deg, #033d29, #097814);
+    color: #c0c0c0;
+    border-radius: 0;
+    width: 100%;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+}
+.btn-green-gradient:hover {
+    color: #033d29!important;
+    background: #c0c0c0;
+    border: 1px solid #033d29;
+    text-decoration: none;
+    font-family: "MYRIADPRO-BOLD", sans-serif;
+}
+.home-card-pagination {
+    padding: 0 3rem;
+    margin-bottom: 3rem;
+    display: block;
+    transition: all 0.5s;
+}
+.home-card-pagination:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+.home-card-pagination:hover img{
+    transform: scale(1.2);
+    opacity: 0.5;
+    transition: all 0.5s;
+    text-decoration: none;
+
+}
+.home-card-pagination-title {
+    font-size: 36px;
+    line-height: 50px;
+    color: #043927;
+    font-family: "MYRIADPRO-BOLD", sans-serif;
+    text-transform: uppercase;
+}
+.home-card-pagination img {
+   width: 100%;
+}
+.page-link {
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #000000;
+    background-color: transparent;
+    border: 0;
+    font-size: 1.5rem;
+}
+.footer-bg {
+    background: url("../images/footer-bg.png") no-repeat;
+    background-size: cover;
+}
+footer ul li a {
+    color: #000000;
+}
+footer h4 {
+    color: #07601d;
+    font-size: 22px;
+    line-height: 30px;
+    font-family: "MYRIADPRO-BOLD", sans-serif;
+}
+footer .abs {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+}
+
+/* -----blog----- */
+.rose-bg {
+    background-color: #c4b3ab;
+}
+.blog-card h2 {
+    color: #043927;
+    font-size: 50px;
+    line-height: 54px;
+    font-family: "MYRIADPRO-BOLD", sans-serif;
+}
+.blog-card .subtitle {
+    color: #c4b3ab;
+    font-size: 40px;
+    line-height: 50px;
+    font-family: 'MYRIADPRO-REGULAR', sans-serif;
+    margin-bottom: 32px;
+}
+.blog-card ul li {
+    color: #000000;
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.blog-card .btn-green-gradient {
+    font-size: 30px;
+    color: #ffffff;
+    width: 320px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 40px;
+}
+.blog-img {
+    overflow: hidden;
+}
+.blog-img-anim {
+    transition: all 0.3s;
+}
+.blog-img:hover .blog-img-anim{
+    transform: scale(1.5);
+}
+
+.fashion-icon1:before {
+    content: url("../images/fashion-icon1png.png");
+    margin-right: 10px;
+}
+.fashion-icon2:before {
+    content: url("../images/fashion-icon2.png");
+    margin-right: 15px;
+}
+
+/*----brand-----*/
+.brand-section-bg {
+    background-image: url("../images/brand-bg.png");
+    background-size: cover;
+    height: 735px;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+h1 {
+    color: #e3e3e3;
+    font-size: 145px;
+    letter-spacing: -10px;
+    font-family: "MYRIADPRO-BOLD", sans-serif;
+    text-transform: uppercase;
+}
+#carousel-brand.owl-carousel .owl-item img {
+    display: block;
+    width: auto;
+}
+#carousel-brand.owl-carousel .owl-stage {
+    display: flex;
+    align-items: center;
+}
+#carousel2.owl-carousel  .owl-nav.disabled,
+#carousel-brand.owl-carousel  .owl-nav.disabled {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    right: -40px;
+    left: -40px;
+    top: 17%;
+}
+#carousel2.owl-carousel  .owl-nav.disabled button,
+#carousel-brand.owl-carousel  .owl-nav.disabled button {
+    zoom: 3;
+    outline: none;
+}
+.main-item-bg {
+    position: relative;
+}
+.main-item-bg:before{
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    background-color: #c4b3ab;
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.main-item-bg:after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 80px;
+    background-color: #000000;
+    left: 0;
+    right: 0;
+    top: -90px;
+    margin: 0 auto;
+}
+.brand-section .title {
+    font-size: 60px;
+    line-height: 64px;
+    margin-bottom: 80px;
+    font-family: "MYRIADPRO-BOLD", sans-serif;
+}
+.brand-section .info-text {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 40px;
+    padding-right: 30px;
+}
+.brand-section .btn-green-gradient {
+    width: 260px;
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+.rose-border:before {
+    content: '';
+    position: absolute;
+    width: 270px;
+    height: 112%;
+    background-color: #c4b3ab;
+    top: -6%;
+    right: 0;
+    z-index: -1;
+}
+
+/*-----about------*/
+.about-section-bg {
+    background-image: url("../images/aboutUs-cover.jpg");
+    background-size: cover;
+    height: 735px;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+.about-sections h2 {
+    color: #34562e;
+}
+.owl-slider-about {
+    background-color: #c4b3ab;
+    padding: 40px 40px 60px;
+}
+#carousel1 .owl-dots {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
+.owl-slider-about .owl-dots {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    left: 0;
+}
+#carousel1.owl-carousel button.owl-dot,
+.owl-slider-about .owl-carousel button.owl-dot {
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 2px;
+    outline: none;
+}
+#carousel1.owl-carousel button.owl-dot.active,
+.owl-slider-about .owl-carousel button.owl-dot.active {
+    background-color: #9e9089;
+}
+.about-sections p {
+   font-family: "MYRIADPRO-BOLD", sans-serif;
+}
+.about-sections .btn-green-gradient {
+    color: #ffffff;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    width: 260px;
+}
