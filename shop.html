@@ -7,11 +7,14 @@
     <title>SHOP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
           integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/owl-carousel-min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/range.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+
 </head>
 <body>
 <header class="fixed-top header-bg">
@@ -82,12 +85,82 @@
    <div class="container-fluid pt-5 mt-5">
        <div class="row py-5">
            <div class="col-md-3 col-12">
-               <div class="sidebar">
-                   <ul>
-                       <li>
-                           PRODUCT PAGES
-                       </li>
-                   </ul>
+               <div class="sidebar px-5">
+                   <form action="#">
+                       <div class="sidebar-title">PRODUCT PAGES</div>
+                       <ul class="list-unstyled px-4 mb-5">
+                           <li class="clothing-icon">
+                               <a href="#">Clothing</a>
+                           </li>
+                           <li class="accessories-icon">
+                               <a href="#">Accessories</a>
+                           </li>
+                           <li class="beauty-icon">
+                               <a href="#">Beauty Arte</a>
+                           </li>
+                           <li class="book-icon">
+                               <a href="#">Book</a>
+                           </li>
+                       </ul>
+                       <div class="sidebar-title">Search</div>
+                       <div class="shop-search mb-5">
+                           <input type="search" class="form-control " placeholder="Search">
+                       </div>
+                       <div class="sidebar-title">On Sale</div>
+                       <div class="px-4 mb-5">
+                           <div class="form-group">
+                               <input type="checkbox" id="sale">
+                               <label for="sale" style="text-transform: capitalize">On Sale (58)</label>
+                           </div>
+                       </div>
+                       <div class="sidebar-title">Price</div>
+                       <div class="mb-5 d-flex flex-column">
+                           <div class="price-range-slider">
+                               <p class="range-value">
+                                   <input type="text" id="amount" readonly/>
+                               </p>
+                               <div id="slider-range" class="range-bar"></div>
+                           </div>
+                           <div class="d-flex align-items-center">
+                               <input type="number" class="form-control range-slide-input"/>
+                               <span class="px-2">TO</span>
+                               <input type="number" class="form-control range-slide-input"/>
+                               <button class="btn-rose border-0 px-3 py-1 ml-2">GO</button>
+                           </div>
+                       </div>
+
+                       <div class="sidebar-title ">Brand</div>
+                       <div class="px-4 mb-5">
+                           <div class="form-group">
+                               <input type="checkbox" id="TIFFANY">
+                               <label for="TIFFANY">TIFFANY</label>
+                           </div>
+                           <div class="form-group">
+                               <input type="checkbox" id="cuccy">
+                               <label for="cuccy">cuccy</label>
+                           </div>
+                           <div class="form-group">
+                               <input type="checkbox" id="armani">
+                               <label for="armani">armani</label>
+                           </div>
+                           <div class="form-group">
+                               <input type="checkbox" id="dior">
+                               <label for="dior">dior</label>
+                           </div>
+                           <div class="form-group">
+                               <input type="checkbox" id="STEFFANI">
+                               <label for="STEFFANI">STEFFANI</label>
+                           </div>
+                           <div class="form-group">
+                               <input type="checkbox" id="SOLLAR">
+                               <label for="SOLLAR">SOLLAR</label>
+                           </div>
+                           <div class="form-group">
+                               <input type="checkbox" id="FACE">
+                               <label for="FACE">FACE</label>
+                           </div>
+                       </div>
+                   </form>
                </div>
 
            </div>
@@ -274,8 +347,29 @@
     </div>
 </footer>
 
+
+
+
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/jquery.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $( function() {
+        $( "#slider-range" ).slider({
+            range: true,
+            min: 0,
+            max: 500,
+            values: [ 75, 300 ],
+            slide: function( event, ui ) {
+                $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+            }
+        });
+        $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+            " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+    } );
+</script>
 <script src="js/bootstrap/bootstrap.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script>
