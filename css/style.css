@@ -207,6 +207,9 @@ footer .abs {
 .footer-logo img{
     width: 100%;
 }
+.footer-links ul li.active a {
+    color: #ffffff;
+}
 
 /* -----blog----- */
 .rose-bg {
