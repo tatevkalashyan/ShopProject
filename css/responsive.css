@@ -7,6 +7,7 @@
     }
 }
 @media screen and (max-width: 1199px) {
+    .join-section-bg,
     .about-section-bg,
     .brand-section-bg,
     .shop-section-bg {
@@ -36,7 +37,7 @@
     }
     h1 {
         color: #e3e3e3;
-        font-size: 80px;
+        font-size: 60px;
         letter-spacing: -5px;
     }
     .brand-section .btn-green-gradient {
@@ -57,6 +58,9 @@
         width: 100px;
         height: 90px;
     }
+    .blog-section .blog-card .rose-bg img {
+        width: 75%;
+    }
 }
 @media screen and (max-width: 767px){
     .footer-bg {
@@ -75,4 +79,9 @@
     section h2 {
         font-size: 26px;
     }
+    .header-logo {
+        width: 100px;
+        min-width: 100px;
+    }
+
 }
