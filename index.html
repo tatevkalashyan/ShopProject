@@ -65,10 +65,10 @@
                                </div>
                            </li>
                            <li class="nav-item mr-2 mr-xl-4">
-                               <a class="nav-link" type="button"  data-toggle="modal" data-target="#loginModal">Login</a>
+                               <a class="nav-link open-login" type="button"  data-toggle="modal" data-target="#login-registration-modal">Login</a>
                            </li>
                            <li class="nav-item mr-2 mr-xl-4">
-                               <a class="nav-link" type="button"  data-toggle="modal" data-target="#RegistrationModal">Registration</a>
+                               <a class="nav-link open-reg" type="button"  data-toggle="modal" data-target="#login-registration-modal">Registration</a>
                            </li>
                            <li class="nav-item mr-2 mr-xl-4 d-none d-xl-block d-lg-block ">
                                <a class="nav-link" href="#"><i class="fa fa-cart-arrow-down"></i></a>
@@ -310,147 +310,143 @@
         </div>
    </footer>
 
-   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+   <div class="modal fade" id="login-registration-modal" tabindex="-1" aria-labelledby="resetPasswordModalLabel" aria-hidden="true">
        <div class="modal-dialog modal-dialog-centered">
-           <div class="modal-content">
-               <div class="modal-header rose-bg">
-                   <h5 class="modal-title">Login</h5>
-                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                       <span aria-hidden="true">&times;</span>
-                   </button>
-               </div>
-               <div class="modal-body">
-                   <form action="#" class="offset-1 col-10">
-                       <div class="form-group">
-                           <label for="loginInputEmail" class="label">E-mail Address<sup>*</sup></label>
-                           <input type="email" class="form-control" id="loginInputEmail" aria-describedby="emailHelp" placeholder="E-mail Address">
+           <div class="w-100 modal-content-modal content1 d-none">
+               <div class="modal-content">
+                   <div class="modal-header rose-bg">
+                       <h5 class="modal-title">Login</h5>
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                           <span aria-hidden="true">&times;</span>
+                       </button>
+                   </div>
+                   <div class="modal-body">
+                       <form action="#" class="offset-1 col-10">
+                           <div class="form-group">
+                               <label for="loginInputEmail" class="label">E-mail Address<sup>*</sup></label>
+                               <input type="email" class="form-control" id="loginInputEmail" aria-describedby="emailHelp" placeholder="E-mail Address">
+                           </div>
+                           <div class="form-group">
+                               <label for="loginPassword" class="label">Password<sup>*</sup></label>
+                               <input type="password" class="form-control" id="loginPassword" placeholder="**********">
+                           </div>
+                           <button type="submit" class="btn btn-green-gradient">Create account</button>
+                       </form>
+                   </div>
+                   <div class="modal-footer">
+                       <div class="d-flex justify-content-between mt-4 w-100">
+                           <a type="button"  data-toggle="modal" data-target="#forgotPasswordModal" class="ml-2 open-forgot-pass">Forgot Password?</a>
+                           <a type="button"  data-toggle="modal" data-target="#RegistrationModal" class="ml-2 open-reg">Registration</a>
                        </div>
-                       <div class="form-group">
-                           <label for="loginPassword" class="label">Password<sup>*</sup></label>
-                           <input type="password" class="form-control" id="loginPassword" placeholder="**********">
-                       </div>
-                       <button type="submit" class="btn btn-green-gradient">Create account</button>
-                   </form>
-               </div>
-               <div class="modal-footer">
-                   <div class="d-flex justify-content-between mt-4 w-100">
-                       <a type="button"  data-toggle="modal" data-target="#forgotPasswordModal" class="ml-2">Forgot Password?</a>
-                       <a type="button"  data-toggle="modal" data-target="#RegistrationModal" class="ml-2">Registration</a>
                    </div>
                </div>
            </div>
-       </div>
-   </div>
 
-   <div class="modal fade" id="RegistrationModal" tabindex="-1" aria-labelledby="RegistrationModalLabel" aria-hidden="true">
-       <div class="modal-dialog modal-dialog-centered">
-           <div class="modal-content">
-               <div class="modal-header rose-bg">
-                   <h5 class="modal-title">Create Account</h5>
-                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                       <span aria-hidden="true">&times;</span>
-                   </button>
-               </div>
-               <div class="modal-body">
-                   <form action="#" class="offset-1 col-10">
-                       <div class="form-group">
-                           <label for="name" class="label">Name<sup>*</sup></label>
-                           <input type="text" class="form-control" id="name" placeholder="Name">
-                       </div>
-                       <div class="form-group">
-                           <label for="full-name" class="label">Full Name<sup>*</sup></label>
-                           <input type="text" class="form-control" id="full-name" placeholder="Full Name">
-                       </div>
-                       <div class="form-group">
-                           <label for="exampleInputEmail1" class="label">Email Address<sup>*</sup></label>
-                           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address">
-                       </div>
-                       <div class="form-group">
-                           <label for="InputPassword1" class="label">Password<sup>*</sup></label>
-                           <input type="password" class="form-control" id="InputPassword1" placeholder="**********">
-                       </div>
-                       <div class="form-group">
-                           <label for="InputPassword2" class="label">Retype Password<sup>*</sup></label>
-                           <input type="password" class="form-control" id="InputPassword2" placeholder="**********">
-                       </div>
-<!--                       <div class="form-group form-check">-->
-<!--                           <input type="checkbox" class="form-check-input" id="Check1">-->
-<!--                           <label class="form-check-label fs-14" for="Check1">I read and accept <a href="#" class="ml-2">Terms and Conditions</a></label>-->
-<!--                       </div>-->
-                       <button type="submit" class="btn btn-green-gradient">Create account</button>
+           <div class="w-100 modal-content-modal content2 d-none">
+               <div class="modal-content">
+                   <div class="modal-header rose-bg">
+                       <h5 class="modal-title">Create Account</h5>
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                           <span aria-hidden="true">&times;</span>
+                       </button>
+                   </div>
+                   <div class="modal-body">
+                       <form action="#" class="offset-1 col-10">
+                           <div class="form-group">
+                               <label for="name" class="label">Name<sup>*</sup></label>
+                               <input type="text" class="form-control" id="name" placeholder="Name">
+                           </div>
+                           <div class="form-group">
+                               <label for="full-name" class="label">Full Name<sup>*</sup></label>
+                               <input type="text" class="form-control" id="full-name" placeholder="Full Name">
+                           </div>
+                           <div class="form-group">
+                               <label for="exampleInputEmail1" class="label">Email Address<sup>*</sup></label>
+                               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address">
+                           </div>
+                           <div class="form-group">
+                               <label for="InputPassword1" class="label">Password<sup>*</sup></label>
+                               <input type="password" class="form-control" id="InputPassword1" placeholder="**********">
+                           </div>
+                           <div class="form-group">
+                               <label for="InputPassword2" class="label">Retype Password<sup>*</sup></label>
+                               <input type="password" class="form-control" id="InputPassword2" placeholder="**********">
+                           </div>
+                           <!--                       <div class="form-group form-check">-->
+                           <!--                           <input type="checkbox" class="form-check-input" id="Check1">-->
+                           <!--                           <label class="form-check-label fs-14" for="Check1">I read and accept <a href="#" class="ml-2">Terms and Conditions</a></label>-->
+                           <!--                       </div>-->
+                           <button type="submit" class="btn btn-green-gradient">Create account</button>
 
-                   </form>
-               </div>
-               <div class="modal-footer">
-                   <div class="d-flex justify-content-center fs-14 w-100">
-                       Already have an account?
-                       <a type="button"  data-toggle="modal" data-target="#loginModal" class="ml-2">Login</a>
+                       </form>
+                   </div>
+                   <div class="modal-footer">
+                       <div class="d-flex justify-content-center fs-14 w-100">
+                           Already have an account?
+                           <a type="button" data-toggle="modal" data-target="#loginModal" class="ml-2 open-login">Login</a>
+                       </div>
                    </div>
                </div>
            </div>
-       </div>
-   </div>
 
-   <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
-       <div class="modal-dialog modal-dialog-centered">
-           <div class="modal-content">
-               <div class="modal-header rose-bg">
-                   <h5 class="modal-title">Forgot Password?</h5>
-                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                       <span aria-hidden="true">&times;</span>
-                   </button>
-               </div>
-               <div class="modal-body">
-                   <form action="#" class="offset-1 col-10">
-                       <p>Enter your email address and we’ll <br> send you a link to reset your password</p>
-                       <div class="form-group">
-                           <label for="exampleInputEmail1" class="label">Email Address</label>
-                           <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Email Address">
+           <div class="w-100 modal-content-modal content3 d-none">
+               <div class="modal-content">
+                   <div class="modal-header rose-bg">
+                       <h5 class="modal-title">Forgot Password?</h5>
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                           <span aria-hidden="true">&times;</span>
+                       </button>
+                   </div>
+                   <div class="modal-body">
+                       <form action="#" class="offset-1 col-10">
+                           <p>Enter your email address and we’ll <br> send you a link to reset your password</p>
+                           <div class="form-group">
+                               <label for="exampleInputEmail1" class="label">Email Address</label>
+                               <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Email Address">
+                           </div>
+                           <div class="w-100 d-flex justify-content-between mt-4">
+                               <a href="#" type="submit" class="btn-green-gradient-border mr-2">Cancel</a>
+                               <a  type="button"  data-toggle="modal" data-target="#resetPasswordModal" class="btn btn-green-gradient ml-2 open-reset-pass">Send</a>
+                           </div>
+                       </form>
+                   </div>
+                   <div class="modal-footer">
+                       <div class="d-flex justify-content-center mt-4 fs-14 w-100">
+                           Don't have an account?
+                           <a type="button" data-toggle="modal" data-target="#RegistrationModal" class="ml-2 open-reg">Sign Up</a>
                        </div>
-                       <div class="w-100 d-flex justify-content-between mt-4">
-                           <a href="#" type="submit" class="btn-green-gradient-border mr-2">Cancel</a>
-                           <a  type="button"  data-toggle="modal" data-target="#resetPasswordModal" class="btn btn-green-gradient ml-2">Send</a>
-                       </div>
-                   </form>
-               </div>
-               <div class="modal-footer">
-                   <div class="d-flex justify-content-center mt-4 fs-14 w-100">
-                       Don't have an account?
-                       <a type="button"  data-toggle="modal" data-target="#RegistrationModal" class="ml-2">Sign Up</a>
                    </div>
                </div>
            </div>
-       </div>
-   </div>
 
-   <div class="modal fade" id="resetPasswordModal" tabindex="-1" aria-labelledby="resetPasswordModalLabel" aria-hidden="true">
-       <div class="modal-dialog modal-dialog-centered">
-           <div class="modal-content">
-               <div class="modal-header rose-bg">
-                   <h5 class="modal-title">Reset Password?</h5>
-                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                       <span aria-hidden="true">&times;</span>
-                   </button>
-               </div>
-               <div class="modal-body">
-                   <form action="#"  class="offset-1 col-10">
-                       <h3 class="h3 mr-auto">Reset Your Password</h3>
-                       <div class="form-group">
-                           <label for="newInputPassword1" class="label">Password<sup>*</sup></label>
-                           <input type="password" class="form-control" id="newInputPassword1" placeholder="**********">
+           <div class="w-100 modal-content-modal content4 d-none">
+               <div class="modal-content">
+                   <div class="modal-header rose-bg">
+                       <h5 class="modal-title">Reset Password?</h5>
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                           <span aria-hidden="true">&times;</span>
+                       </button>
+                   </div>
+                   <div class="modal-body">
+                       <form action="#"  class="offset-1 col-10">
+                           <h3 class="h3 mr-auto">Reset Your Password</h3>
+                           <div class="form-group">
+                               <label for="newInputPassword1" class="label">Password<sup>*</sup></label>
+                               <input type="password" class="form-control" id="newInputPassword1" placeholder="**********">
+                           </div>
+                           <div class="form-group">
+                               <label for="newInputPassword2" class="label">Retype Password<sup>*</sup></label>
+                               <input type="password" class="form-control" id="newInputPassword2" placeholder="**********">
+                           </div>
+                           <button type="submit" class="btn btn-green-gradient">Save</button>
+                           <!--                       <div class="d-flex justify-content-center mt-4 fs-14">Don't have an account?<a href="createAccount.html" class="ml-2">Sign Up</a></div>-->
+                       </form>
+                   </div>
+                   <div class="modal-footer">
+                       <div class="d-flex justify-content-center mt-4 fs-14 w-100">
+                           Don't have an account?
+                           <a type="button"   data-toggle="modal" data-target="#RegistrationModal" class="ml-2 open-reg">Sign Up</a>
                        </div>
-                       <div class="form-group">
-                           <label for="newInputPassword2" class="label">Retype Password<sup>*</sup></label>
-                           <input type="password" class="form-control" id="newInputPassword2" placeholder="**********">
-                       </div>
-                       <button type="submit" class="btn btn-green-gradient">Save</button>
-<!--                       <div class="d-flex justify-content-center mt-4 fs-14">Don't have an account?<a href="createAccount.html" class="ml-2">Sign Up</a></div>-->
-                   </form>
-               </div>
-               <div class="modal-footer">
-                   <div class="d-flex justify-content-center mt-4 fs-14 w-100">
-                       Don't have an account?
-                       <a type="button"  data-toggle="modal" data-target="#RegistrationModal" class="ml-2">Sign Up</a>
                    </div>
                </div>
            </div>
@@ -517,10 +513,21 @@
 
    <script>
        $(document).ready(function() {
-           $(".modal.fade").click(function(){
-               $(".modal.fade").removeClass('show');
-               $(".modal-backdrop.fade").removeClass('show');
-               $("this").addClass('show');
+           $(".open-reg").click(function() {
+               $(".modal-content-modal").addClass('d-none');
+               $(".modal-content-modal.content2").toggleClass('d-none');
+           });
+           $(".open-login").click(function() {
+               $(".modal-content-modal").addClass('d-none');
+               $(".modal-content-modal.content1").toggleClass('d-none');
+           });
+           $(".open-forgot-pass").click(function() {
+               $(".modal-content-modal").addClass('d-none');
+               $(".modal-content-modal.content3").toggleClass('d-none');
+           });
+           $(".open-reset-pass").click(function() {
+               $(".modal-content-modal").addClass('d-none');
+               $(".modal-content-modal.content4").toggleClass('d-none');
            });
        })
    </script>
