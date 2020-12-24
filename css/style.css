@@ -132,6 +132,16 @@ section h2 {
     justify-content: center;
 
 }
+.btn-green-gradient-border {
+    color: #033d29!important;
+    background: #c0c0c0;
+    border: 1px solid #033d29;
+    border-radius: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .btn-green-gradient {
     background: linear-gradient(90deg, #033d29, #097814);
     color: #c0c0c0;
@@ -529,12 +539,13 @@ h1 {
     border: 1px solid #000000;
     padding-left: 40px;
 }
-
+.shop-check .form-group,
 .sidebar .form-group {
     display: block;
     margin-bottom: 15px;
 }
 
+.shop-check .form-group input,
 .sidebar .form-group input {
     padding: 0;
     height: initial;
@@ -544,6 +555,7 @@ h1 {
     cursor: pointer;
 }
 
+.shop-check .form-group label,
 .sidebar .form-group label {
     position: relative;
     cursor: pointer;
@@ -551,6 +563,7 @@ h1 {
     font-size: 24px;
 }
 
+.shop-check .form-group label:before,
 .sidebar .form-group label:before {
     content:'';
     -webkit-appearance: none;
@@ -564,11 +577,13 @@ h1 {
     margin-right: 10px;
 }
 
+.shop-check .form-group  input:checked + label:before,
 .sidebar .form-group  input:checked + label:before {
     content:'';
     background-color: transparent;
 }
 
+.shop-check .form-group input:checked + label:after,
 .sidebar .form-group input:checked + label:after {
     content: '';
     display: block;
@@ -655,4 +670,9 @@ h1 {
 
 button:focus {
     outline: none;
+}
+/*modals*/
+.modal-footer a{
+    font-size: 16px;
+    color: #c4aa9d;
 }
