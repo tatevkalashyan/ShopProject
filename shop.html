@@ -73,7 +73,8 @@
                         <li class="nav-item mr-2 mr-xl-4">
                             <a class="nav-link" href="#">Registration</a>
                         </li>
-                        <li class="nav-item mr-2 mr-xl-4 d-none d-xl-block d-lg-block ">
+                        <li class="nav-item mr-2 mr-xl-4 d-none d-xl-block d-lg-block position-relative">
+                            <span class="cart-products-count">0</span>
                             <a class="nav-link" href="#"><i class="fa fa-cart-arrow-down"></i></a>
                         </li>
                         <li class="nav-item dropdown">
@@ -103,20 +104,28 @@
                <div class="sidebar px-5">
                    <form action="#">
                        <div class="sidebar-title">PRODUCT PAGES</div>
-                       <ul class="list-unstyled px-4 mb-5">
-                           <li class="clothing-icon">
-                               <a href="#">Clothing</a>
-                           </li>
-                           <li class="accessories-icon">
-                               <a href="#">Accessories</a>
-                           </li>
-                           <li class="beauty-icon">
-                               <a href="#">Beauty Arte</a>
-                           </li>
-                           <li class="book-icon">
-                               <a href="#">Book</a>
-                           </li>
-                       </ul>
+                       <div class="scrollbar shop-page-scroll">
+                           <div class="force-overflow">
+                               <ul class="list-unstyled px-4 mb-5">
+                                   <li class="form-group">
+                                       <input type="checkbox" id="Clothing">
+                                       <label for="Clothing" class="clothing-icon">Clothing</label>
+                                   </li>
+                                   <li class="form-group">
+                                       <input type="checkbox" id="Accessories">
+                                       <label for="Accessories" class="accessories-icon">Accessories</label>
+                                   </li>
+                                   <li class="form-group">
+                                       <input type="checkbox" id="Arte">
+                                       <label for="Arte" class="beauty-icon">Beauty Arte</label>
+                                   </li>
+                                   <li class="form-group">
+                                       <input type="checkbox" id="Book">
+                                       <label for="Book" class="book-icon">Book</label>
+                                   </li>
+                               </ul>
+                           </div>
+                       </div>
                        <div class="sidebar-title">Search</div>
                        <div class="shop-search mb-5">
                            <input type="search" class="form-control " placeholder="Search">
@@ -130,49 +139,53 @@
                        </div>
                        <div class="sidebar-title">Price</div>
                        <div class="mb-5 d-flex flex-column">
-                           <div class="price-range-slider">
-                               <p class="range-value">
-                                   <input type="text" id="amount" readonly/>
-                               </p>
-                               <div id="slider-range" class="range-bar"></div>
-                           </div>
-                           <div class="d-flex align-items-center">
+                           <div class="d-flex align-items-center mb-5">
                                <input type="number" class="form-control range-slide-input"/>
                                <span class="px-2">TO</span>
                                <input type="number" class="form-control range-slide-input"/>
                                <button class="btn-rose border-0 px-3 py-1 ml-2">GO</button>
                            </div>
+                           <div class="price-range-slider">
+<!--                               <p class="range-value">-->
+<!--                                   <input type="text" id="amount" readonly/>-->
+<!--                               </p>-->
+                               <div id="slider-range" class="range-bar"></div>
+                           </div>
                        </div>
 
                        <div class="sidebar-title ">Brand</div>
                        <div class="px-4 mb-5">
-                           <div class="form-group">
-                               <input type="checkbox" id="TIFFANY">
-                               <label for="TIFFANY">TIFFANY</label>
-                           </div>
-                           <div class="form-group">
-                               <input type="checkbox" id="cuccy">
-                               <label for="cuccy">cuccy</label>
-                           </div>
-                           <div class="form-group">
-                               <input type="checkbox" id="armani">
-                               <label for="armani">armani</label>
-                           </div>
-                           <div class="form-group">
-                               <input type="checkbox" id="dior">
-                               <label for="dior">dior</label>
-                           </div>
-                           <div class="form-group">
-                               <input type="checkbox" id="STEFFANI">
-                               <label for="STEFFANI">STEFFANI</label>
-                           </div>
-                           <div class="form-group">
-                               <input type="checkbox" id="SOLLAR">
-                               <label for="SOLLAR">SOLLAR</label>
-                           </div>
-                           <div class="form-group">
-                               <input type="checkbox" id="FACE">
-                               <label for="FACE">FACE</label>
+                           <div class="scrollbar shop-page-scroll">
+                               <div class="force-overflow">
+                                   <div class="form-group">
+                                       <input type="checkbox" id="TIFFANY">
+                                       <label for="TIFFANY">TIFFANY</label>
+                                   </div>
+                                   <div class="form-group">
+                                       <input type="checkbox" id="cuccy">
+                                       <label for="cuccy">cuccy</label>
+                                   </div>
+                                   <div class="form-group">
+                                       <input type="checkbox" id="armani">
+                                       <label for="armani">armani</label>
+                                   </div>
+                                   <div class="form-group">
+                                       <input type="checkbox" id="dior">
+                                       <label for="dior">dior</label>
+                                   </div>
+                                   <div class="form-group">
+                                       <input type="checkbox" id="STEFFANI">
+                                       <label for="STEFFANI">STEFFANI</label>
+                                   </div>
+                                   <div class="form-group">
+                                       <input type="checkbox" id="SOLLAR">
+                                       <label for="SOLLAR">SOLLAR</label>
+                                   </div>
+                                   <div class="form-group">
+                                       <input type="checkbox" id="FACE">
+                                       <label for="FACE">FACE</label>
+                                   </div>
+                               </div>
                            </div>
                        </div>
                    </form>
@@ -183,82 +196,100 @@
                 <div class="row d-flex justify-content-between">
                     <div class="col-md-6 col-lg-4 d-flex justify-content-center">
                         <div class="card shop-card">
-                            <div class="img-area">
-                                <img class="card-img-top" src="images/shop-pic2.jpg" alt="Card image cap">
-                            </div>
-                            <div class="title">Fiore</div>
+                            <a href="#">
+                                <div class="img-area">
+                                    <img class="card-img-top" src="images/shop-pic2.jpg" alt="Card image cap">
+                                </div>
+                                <div class="title">Fiore</div>
+                            </a>
                             <a href="#" class="btn btn-green-gradient py-3">AD TO CART</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 d-flex justify-content-center">
                         <div class="card shop-card">
-                            <div class="img-area">
-                                <img class="card-img-top" src="images/shop-pic3.jpg" alt="Card image cap">
-                            </div>
-                            <div class="title">STEFFANY</div>
+                            <a href="#">
+                                <div class="img-area">
+                                    <img class="card-img-top" src="images/shop-pic3.jpg" alt="Card image cap">
+                                </div>
+                                <div class="title">STEFFANY</div>
+                            </a>
                             <a href="#" class="btn btn-green-gradient py-3">AD TO CART</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 d-flex justify-content-center">
                         <div class="card shop-card">
-                            <div class="img-area">
-                                <img class="card-img-top" src="images/shop-pic4.jpg" alt="Card image cap">
-                            </div>
-                            <div class="title">Armani</div>
+                            <a href="#">
+                                <div class="img-area">
+                                    <img class="card-img-top" src="images/shop-pic4.jpg" alt="Card image cap">
+                                </div>
+                                <div class="title">Armani</div>
+                            </a>
                             <a href="#" class="btn btn-green-gradient py-3">AD TO CART</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 d-flex justify-content-center">
                         <div class="card shop-card">
-                            <div class="img-area">
-                                <img class="card-img-top" src="images/shop-pic5.jpg" alt="Card image cap">
-                            </div>
-                            <div class="title">Fiore</div>
+                            <a href="#">
+                                <div class="img-area">
+                                    <img class="card-img-top" src="images/shop-pic5.jpg" alt="Card image cap">
+                                </div>
+                                <div class="title">Fiore</div>
+                            </a>
                             <a href="#" class="btn btn-green-gradient py-3">AD TO CART</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 d-flex justify-content-center">
                         <div class="card shop-card">
-                            <div class="img-area">
-                                <img class="card-img-top" src="images/shop-pic6.jpg" alt="Card image cap">
-                            </div>
-                            <div class="title">steffany</div>
+                            <a href="#">
+                                <div class="img-area">
+                                    <img class="card-img-top" src="images/shop-pic6.jpg" alt="Card image cap">
+                                </div>
+                                <div class="title">steffany</div>
+                            </a>
                             <a href="#" class="btn btn-green-gradient py-3">AD TO CART</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 d-flex justify-content-center">
                         <div class="card shop-card">
-                            <div class="img-area">
-                                <img class="card-img-top" src="images/shop-pic7.jpg" alt="Card image cap">
-                            </div>
-                            <div class="title">armani</div>
+                            <a href="#">
+                                <div class="img-area">
+                                    <img class="card-img-top" src="images/shop-pic7.jpg" alt="Card image cap">
+                                </div>
+                                <div class="title">armani</div>
+                            </a>
                             <a href="#" class="btn btn-green-gradient py-3">AD TO CART</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 d-flex justify-content-center">
                         <div class="card shop-card">
-                            <div class="img-area">
-                                <img class="card-img-top" src="images/shop-pic8.jpg" alt="Card image cap">
-                            </div>
-                            <div class="title">fiore</div>
+                            <a href="#">
+                                <div class="img-area">
+                                    <img class="card-img-top" src="images/shop-pic8.jpg" alt="Card image cap">
+                                </div>
+                                <div class="title">fiore</div>
+                            </a>
                             <a href="#" class="btn btn-green-gradient py-3">AD TO CART</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 d-flex justify-content-center">
                         <div class="card shop-card">
-                            <div class="img-area">
-                                <img class="card-img-top" src="images/shop-pic9.jpg" alt="Card image cap">
-                            </div>
-                            <div class="title">STEFFANY</div>
+                            <a href="#">
+                                <div class="img-area">
+                                    <img class="card-img-top" src="images/shop-pic9.jpg" alt="Card image cap">
+                                </div>
+                                <div class="title">STEFFANY</div>
+                            </a>
                             <a href="#" class="btn btn-green-gradient py-3">AD TO CART</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 d-flex justify-content-center">
                         <div class="card shop-card">
-                            <div class="img-area">
-                                <img class="card-img-top" src="images/shop-pic1.jpg" alt="Card image cap">
-                            </div>
-                            <div class="title">armani</div>
+                            <a href="#">
+                                <div class="img-area">
+                                    <img class="card-img-top" src="images/shop-pic1.jpg" alt="Card image cap">
+                                </div>
+                                <div class="title">armani</div>
+                            </a>
                             <a href="#" class="btn btn-green-gradient py-3">AD TO CART</a>
                         </div>
                     </div>

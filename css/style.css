@@ -82,6 +82,21 @@ body {
     transition: width 0.2s ease-out;
     color: #c4b3ab;
 }
+.cart-products-count {
+    position: absolute;
+    top: 6px;
+    right: 2px;
+    width: 15px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: red;
+    color: #ffffff;
+    z-index: 11;
+    text-align: center;
+    font-size: 10px;
+    line-height: 14px;
+
+}
 
 .navbar-light .navbar-nav .nav-link{
     color: #c4b3ab;
@@ -462,6 +477,10 @@ h1 {
     border: 0;
     margin: 32px 0;
 }
+.shop-card>a:hover {
+    opacity: 0.5;
+    text-decoration: none;
+}
 .shop-card .img-area{
     width: 300px;
     height: 435px;
@@ -496,14 +515,14 @@ h1 {
 }
 .sidebar ul li  {
    position: relative;
-    padding-left: 50px;
+    /*padding-left: 50px;*/
     margin: 20px 0;
 }
-.sidebar ul li:after {
-    content: ">";
-    position: absolute;
-    right: 0;
-}
+/*.sidebar ul li:after {*/
+/*    content: ">";*/
+/*    position: absolute;*/
+/*    right: 0;*/
+/*}*/
 .clothing-icon:before {
     content: url("../images/clothes.png");
     position: absolute;
@@ -676,3 +695,37 @@ button:focus {
     font-size: 16px;
     color: #c4aa9d;
 }
+ /*scroll styles*/
+
+
+.scrollbar {
+    float: left;
+    max-height: 350px;
+    width: 100%;
+    background: transparent;
+    overflow-y: scroll;
+    margin-bottom: 25px;
+}
+
+.force-overflow {
+    min-height:  200px;
+}
+
+.shop-page-scroll::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.shop-page-scroll::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+}
+
+.shop-page-scroll::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #c4aa9d;
+}
+ /* end scroll styles*/
+
+
+
